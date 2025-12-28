@@ -1,0 +1,30 @@
+/* CSS for uniform heading sizes on mobile for WordPress site */
+
+/* Mobile-specific heading adjustments */
+@media screen and (max-width: 768px) {
+  /* Make all headings uniform size on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  /* Alternative: Different but controlled sizes for each heading level */
+  /*
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.4rem !important; }
+  h3 { font-size: 1.3rem !important; }
+  h4 { font-size: 1.2rem !important; }
+  h5 { font-size: 1.1rem !important; }
+  h6 { font-size: 1rem !important; }
+  */
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+  }
+}
