@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Mobile Headings Example</title>
+    <link rel="stylesheet" href="wordpress-mobile-headings.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: 769px) {
+            /* Desktop styles for comparison */
+            body.home h1, body.page h1, body.single h1, body.archive h1, body.category h1, body.tag h1, body.search h1, body.blog h1 {
+                font-size: 2.5rem;
+            }
+            body.home h2, body.page h2, body.single h2, body.archive h2, body.category h2, body.tag h2, body.search h2, body.blog h2 {
+                font-size: 2rem;
+            }
+            body.home h3, body.page h3, body.single h3, body.archive h3, body.category h3, body.tag h3, body.search h3, body.blog h3 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="home">
+    <div class="container">
+        <h1>Main Heading (H1)</h1>
+        <p>This is a paragraph showing how the main heading appears. On mobile devices, this heading will be smaller than on desktop.</p>
+        
+        <h2>Section Heading (H2)</h2>
+        <p>This is a paragraph showing how the section heading appears. The size will be consistent across all WordPress page types on mobile.</p>
+        
+        <h3>Subsection Heading (H3)</h3>
+        <p>This is a paragraph showing how the subsection heading appears. On mobile devices, all heading sizes are reduced for better readability.</p>
+        
+        <h4>Fourth Level Heading (H4)</h4>
+        <p>This is a paragraph showing how the fourth level heading appears. The mobile styles ensure consistent sizing across all page types.</p>
+        
+        <h5>Fifth Level Heading (H5)</h5>
+        <p>This is a paragraph showing how the fifth level heading appears.</p>
+        
+        <h6>Sixth Level Heading (H6)</h6>
+        <p>This is a paragraph showing how the sixth level heading appears. The CSS ensures uniform sizing on all WordPress pages.</p>
+    </div>
+    
+    <script>
+        // Simple script to show viewport width for testing
+        function updateViewportInfo() {
+            document.body.setAttribute('data-viewport-width', window.innerWidth + 'px');
+        }
+        
+        window.addEventListener('resize', updateViewportInfo);
+        updateViewportInfo();
+        
+        // Add a small indicator to see current viewport size
+        const indicator = document.createElement('div');
+        indicator.style.position = 'fixed';
+        indicator.style.top = '10px';
+        indicator.style.right = '10px';
+        indicator.style.background = '#000';
+        indicator.style.color = '#fff';
+        indicator.style.padding = '5px';
+        indicator.style.fontSize = '12px';
+        indicator.textContent = 'Viewport: ' + window.innerWidth + 'px';
+        document.body.appendChild(indicator);
+        
+        window.addEventListener('resize', function() {
+            indicator.textContent = 'Viewport: ' + window.innerWidth + 'px';
+        });
+    </script>
+</body>
+</html>
